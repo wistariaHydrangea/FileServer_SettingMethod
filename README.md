@@ -55,7 +55,7 @@ priority=1 <--★ 追記する
 
 
 ## 4.sambaのインストールと設定
-- sambaのインストール
+- sambaのインストール  
      [...]# yum -y install samba samba-client samba-winbind samba-winbind-client
      ##samba本体、sambaのクライアント用コマンド、samba機能ライブラリ、samba機能ライブラリコマンドのインストール
 
