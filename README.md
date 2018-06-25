@@ -144,6 +144,8 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      - https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files
 
 
+## 6.smb.confの設定ファイルを書き換えてアクセスできるようにする
+
 
 
 
