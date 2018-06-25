@@ -165,15 +165,16 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
 - ACLの編集  
      `[...]# setfacl -m u:(user name):rwx (text name)`  ##  
      `[...]# getfacl (text or foulder name)`  ##設定したら確認  
-     `# file: (ディレクトリ名またはファイル名)`  
-     `# owner: (ユーザ名)`  ##ownerもgroupもとりあえず名前が入ることだけわかればいい  
-     `# group: (グループ名):rwx`  ##上と同じく  
-     `user : :rwx`  
-     `user:(ysername):rwx`  
-     `group::r-x`  
-     `other::r-x`  
+      
+      # file: (ディレクトリ名またはファイル名)
+      # owner: (ユーザ名)  ##ownerもgroupもとりあえず名前が入ることだけわかればいい  
+      # group: (グループ名):rwx   ##上と同じく  
+      user : :rwx
+      user:(ysername):rwx
+      group::r-x
+      other::r-x
 
-     `[...]# setfacl -b (ディレクトリ名またはファイル名)`  ##設定の初期化
+     `[...]#setfacl -b (ディレクトリ名またはファイル名)`  ##設定の初期化
 
      rは書き込みの許可、wは読み込みの許可、xは実行の許可が与えられているかどうかが表示されている。-はその許可がないことを指す
 
