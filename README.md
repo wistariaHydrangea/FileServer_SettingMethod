@@ -78,18 +78,26 @@ priority=1 <--★ 追記する
      `[...]# getsebool -a I grep samba I grep 'on'`  ##先ほど設定したSELiunxの'on'のみを表示
 
 - 自動起動の設定
-     `[...]# systemctl enable smb.service`  ##smbの自動起動の有効化  
-     `[...]# systemctl enable nmb.service`  ##nmb自動起動の有効化  
-     `[...]# systemctl enable winbind.service`  ##winbindの自動起動の有効化  
+     `[...]#systemctl enable smb.service`  ##smbの自動起動の有効化  
+     `[...]#systemctl enable nmb.service`  ##nmb自動起動の有効化  
+     `[...]#systemctl enable winbind.service`  ##winbindの自動起動の有効化  
 
 - ワークグループの設定  
 Windowsと同じワークグループに属するようにsmb.confの設定内容を変更します。  
-     `[...]# vim /etc/samba/smb.conf`
+     `[...]#vim /etc/samba/smb.conf`
 
    smb.conf  
      (途中省略)  
           [global]  
                wrokgroup = WORKGROUP  ##デフォルトではMYGROUPとなっているはず？なのでWROKGROUPに書き換える  
      (以後省略)  
+
+- 起動
+        とりあえずここまでで細かい設定は終わりなので各サービスを起動
+        `[...]#systemctl start smb.service`  ##smbの起動
+        `[...]#systemctl start nmb.service`  ##nmbの起動
+        `[...]#systemctl start winbind.service`  ##winbindの起動
+
+
 
 
