@@ -99,7 +99,7 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
         `[...]#systemctl start winbind.service`  ##winbindの起動  
 
 
-## 5.アカウント管理
+## 5.アカウント管理  
 - Sambaアカウントを追加
      `[...]# useradd (作成したいユーザ名)`  ##Centos7にユーザを追加  
      `[...]# passwd (作成したユーザ名)`  ##作成したユーザにパスワードを追加  
@@ -110,6 +110,11 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      `(以降省略)`
 
      Centosにアカウントを追加するのは'useradd'、Sambaにアカウントを追加するのは'pdbedit'コマンドを使う
+
+- Sambaアカウントの一覧  
+     `[...]# pdbedit -L`  
+     `(作成したユーザ名):1001:`  ##数字は作成していくと変わる
+
 
 
 
