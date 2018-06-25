@@ -56,22 +56,22 @@ priority=1 <--★ 追記する
 
 ## 4.sambaのインストールと設定
 - sambaのインストール  
-     `[...]# yum -y install samba samba-client samba-winbind samba-winbind-client`  
+     `[...]#yum -y install samba samba-client samba-winbind samba-winbind-client`  
      前から順にsamba本体、sambaのクライアント用コマンド、samba機能ライブラリ、samba機能ライブラリコマンドのインストール
 
 - firewallの設定  
-     `[...]# firewall-cmd --add-service=samba --permanent`   ##sambaへのアクセス許可をする  
-     `[...]# firewall-cmd --add-service=samba-clilent permanent`   ##sambaクライアントのアクセス許可をする  
+     `[...]#firewall-cmd --add-service=samba --permanent`   ##sambaへのアクセス許可をする  
+     `[...]#firewall-cmd --add-service=samba-clilent permanent`   ##sambaクライアントのアクセス許可をする  
 
 - SELinuxの設定  
-      `[...]# getsebool -a | grep samba`  ##SELinuxの設定の確認  
+      `[...]#getsebool -a | grep samba`  ##SELinuxの設定の確認  
       
-      `[...]# setsebool -P samba_create_home_dirs on
-       [...]# setsebool -P samba_domain_controller on
-       [...]# setsebool -P samba_enable_home_dirs on
-       [...]# setsebool -P samba_export_share_all_rw on
-       [...]# setsebool -P samba_share_nfs on
-       [...]# setsebool -P tmpreaper_use_samba on
-       [...]# setsebool -P use_samba_home_dirs on`  
+       [...]#setsebool -P samba_create_home_dirs on
+       [...]#setsebool -P samba_domain_controller on
+       [...]#setsebool -P samba_enable_home_dirs on
+       [...]#setsebool -P samba_export_share_all_rw on
+       [...]#setsebool -P samba_share_nfs on
+       [...]#setsebool -P tmpreaper_use_samba on
+       [...]#setsebool -P use_samba_home_dirs on 
       
 
