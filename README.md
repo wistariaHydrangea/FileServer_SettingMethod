@@ -23,7 +23,7 @@ Image
 
 もし、できないまたはエラーが発生した場合、CentOS-Base.repoファイルを以下の通りに書き加えてください。
 
-`/etc/yum.repos.d/CentOS-Base.repo`
+`[...]#vim /etc/yum.repos.d/CentOS-Base.repo`
 
 [base]
 name=CentOS-$releasever - Base
@@ -86,7 +86,7 @@ priority=1 <--★ 追記する
 Windowsと同じワークグループに属するようにsmb.confの設定内容を変更します。  
      `[...]# vim /etc/samba/smb.conf`
 
-     smb.conf  
+   smb.conf  
      (途中省略)  
           [global]  
                wrokgroup = WORKGROUP  ##デフォルトではMYGROUPとなっているはず？なのでWROKGROUPに書き換える  
