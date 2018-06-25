@@ -93,10 +93,10 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      (以後省略)  
 
 - 起動
-        とりあえずここまでで細かい設定は終わりなので各サービスを起動
-        `[...]#systemctl start smb.service`  ##smbの起動
-        `[...]#systemctl start nmb.service`  ##nmbの起動
-        `[...]#systemctl start winbind.service`  ##winbindの起動
+        とりあえずここまでで細かい設定は終わりなので各サービスを起動  
+        `[...]#systemctl start smb.service`  ##smbの起動  
+        `[...]#systemctl start nmb.service`  ##nmbの起動  
+        `[...]#systemctl start winbind.service`  ##winbindの起動  
 
 
 
