@@ -144,7 +144,37 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      - https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files
 
 
-## 6.smb.confの設定ファイルを書き換えてアクセスできるようにする
+## 6.smb.confの設定ファイルを書き換えてアクセスできるようにする  
+- 特定のユーザへのアクセス権を与える  
+     /etc/samba/smb.confの設定ファイルを書き換える  
+      (途中省略)  
+          dos charset = cp932;  ##Windowsが使用している文字コードを選択、今回は日本語で設定するので'cp932'  
+          (途中省略)  
+          [(アクセスするフォルダ名)]  
+              path = (アクセスするフォルダのパス);  
+              public = no;  ##念のためにnoにしておく  
+              writeable = yes;  ##書き込みの許可を与える  
+              valid users = (user name) (user name);  ##一人ひとり足していくなら、名前の間にスペースを入れて書く  
+              ##valid users = +(group name);  ##グループ単位で管理したいなら、group nameの前に'+'を入れて書く  
+
+- Sambaの再起動  
+     `[...]# systemctl reload smb.service`  
+     とりあえずこの辺りで再起動しとこうかなーてことで  
+
+- ACLの編集  
+     `[...]# setfacl -m u:(user name):rwx (text name)`  ##  
+     `[...]# getfacl (text or foulder name)`  ##設定したら確認  
+     `# file: (ディレクトリ名またはファイル名)`  
+     `# owner: (ユーザ名)`  ##ownerもgroupもとりあえず名前が入ることだけわかればいい  
+     `# group: (グループ名):rwx`  ##上と同じく  
+     `user : :rwx`  
+     `user:(ysername):rwx`  
+     `group::r-x`  
+     `other::r-x`  
+
+     `[...]# setfacl -b (ディレクトリ名またはファイル名)`  ##設定の初期化
+
+     rは書き込みの許可、wは読み込みの許可、xは実行の許可が与えられているかどうかが表示されている。-はその許可がないことを指す
 
 
 
