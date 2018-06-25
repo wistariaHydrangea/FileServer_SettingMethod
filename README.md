@@ -1,6 +1,6 @@
 # CentOSにSamba(FileServer)を構築する
 
-先輩からなんか手に入れたので今回はcentOS7にSambaを入れてファイルサーバを構築してみようと思います。
+知り合いから「もういらない」と言っていたmousecomputerを手に入れたので今回はcentOS7にSambaを入れてファイルサーバを構築してみようと思います。
 今後はVPNを使って外部からでもファイルの操作ができるようにしていこうと思ってます。
 
 ## 動作環境
@@ -85,4 +85,11 @@ priority=1 <--★ 追記する
 - ワークグループの設定  
 Windowsと同じワークグループに属するようにsmb.confの設定内容を変更します。  
      `[...]# vim /etc/samba/smb.conf`
+
+   ~smb.conf~
+       (途中省略)
+       [global]
+           wrokgroup = WORKGROUP  ##デフォルトではMYGROUPとなっているはず？なのでWROKGROUPに書き換える
+       (以後省略)
+
 
