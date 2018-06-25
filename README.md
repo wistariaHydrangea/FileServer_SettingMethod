@@ -77,5 +77,7 @@ priority=1 <--★ 追記する
      設定が終わったら一応確認しておこう。'on'意外にも確認したいなら後ろの'| grep 'on''をなしでコマンドを打てば、sambaに関するSELiunxのすべての設定が出力されます。  
      `[...]# getsebool -a I grep samba I grep 'on'`  ##先ほど設定したSELiunxの'on'のみを表示
 
-
+     - ワークグループの設定  
+     Windowsと同じワークグループに属するようにsmb.confの設定内容を変更します。  
+     `[...]# vim /etc/samba/smb.conf`
 
