@@ -54,3 +54,9 @@ priority=1 <--★ 追記する
 参照(https://tech.hitsug.net/?CentOS-7%2Fyum)
 
 
+## 4.sambaのインストールと設定
+- sambaのインストール
+     [...]# yum -y install samba samba-client samba-winbind samba-winbind-client
+     ##samba本体、sambaのクライアント用コマンド、samba機能ライブラリ、samba機能ライブラリコマンドのインストール
+
+
