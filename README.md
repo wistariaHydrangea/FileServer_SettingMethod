@@ -74,4 +74,5 @@ priority=1 <--★ 追記する
      `[...]#setsebool -P tmpreaper_use_samba on`  
      `[...]#setsebool -P use_samba_home_dirs on`  
       
-
+設定が終わったら一応確認しておこう。'on'意外にも確認したいなら後ろの'| grep 'on''をなしでコマンドを打てば、sambaに関するSELiunxのすべての設定が出力されます。  
+     `[...]# getsebool -a I grep samba I grep 'on'`  ##先ほど設定したSELiunxの'on'のみを表示
