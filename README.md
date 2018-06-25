@@ -101,9 +101,9 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
 
 ## 5.アカウント管理  
 - Sambaアカウントを追加
-     `[...]# useradd (作成したいユーザ名)`  ##Centos7にユーザを追加  
-     `[...]# passwd (作成したユーザ名)`  ##作成したユーザにパスワードを追加  
-     `[...]# pdbedit -a (作成したユーザ名)`  ##pdbeditコマンドを使ってSambaアカウント追加  
+     `[...]#useradd (作成したいユーザ名)`  ##Centos7にユーザを追加  
+     `[...]#passwd (作成したユーザ名)`  ##作成したユーザにパスワードを追加  
+     `[...]#pdbedit -a (作成したユーザ名)`  ##pdbeditコマンドを使ってSambaアカウント追加  
      `new password:`  
      `retype new password:`  
      `Unix username: (作成したユーザ名)`  
@@ -112,8 +112,37 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      Centosにアカウントを追加するのは'useradd'、Sambaにアカウントを追加するのは'pdbedit'コマンドを使う
 
 - Sambaアカウントの一覧  
-     `[...]# pdbedit -L`  
+     `[...]#pdbedit -L`  
      `(作成したユーザ名):1001:`  ##数字は作成していくと変わる
+
+- Sambaアカウントのパスワードを変更  
+     `[...]#smbpasswd (ユーザ名)`  
+     `New SMB password:`  ##入力しても何も表示ません  
+     `Retype new password:`  ##上と同じく何も表示されません  
+
+- Sambaアカウントの削除  
+     `[...]#pdbedit -x (ユーザ名)`  ##Sambaアカウント消去  
+     `[...]#pdbedit -L`  ##本当に削除できているか確認  
+
+- Sambaグループの追加でユーザをまとめて管理  
+     `[...]#groupadd (グループ名)`  
+     `[...]#usermod -aG (ユーザを追加したいグループ名) (追加するユーザ名)`  
+
+     他にもコマンドがあるので調べて見るのもいいかも
+     - https://eng-entrance.com/linux-command-usermod
+     - https://eng-entrance.com/linux-command-groupmod#groupadd
+
+     どんなgroupを作成したか忘れてしまった場合は、groupの一覧が/etc/groupに保存されているので確認してみてください。
+
+- これから使うフォルダを作成
+     `[...]#mkdir /(作成するフォルダの名前 個人的にオススメは/home/(フォルダ名))`  
+     `[...]#chgrp (所有するグループ名またはユーザ名) (上記で作成したフォルダのパス)`  
+     `[...]#restorecon (上記で作成したフォルダのパス)`  
+
+     restoreconコマンドは説明ができないので各々でググってw  
+     一応参考になりそうなのを見つけたので見てみてください。  
+     - https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files
+
 
 
 
