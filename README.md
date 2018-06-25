@@ -86,10 +86,10 @@ priority=1 <--★ 追記する
 Windowsと同じワークグループに属するようにsmb.confの設定内容を変更します。  
      `[...]# vim /etc/samba/smb.conf`
 
-   -smb.conf-  
-       (途中省略)  
-       [global]  
-           wrokgroup = WORKGROUP  ##デフォルトではMYGROUPとなっているはず？なのでWROKGROUPに書き換える  
-       (以後省略)  
+     smb.conf  
+     (途中省略)  
+          [global]  
+               wrokgroup = WORKGROUP  ##デフォルトではMYGROUPとなっているはず？なのでWROKGROUPに書き換える  
+     (以後省略)  
 
 
