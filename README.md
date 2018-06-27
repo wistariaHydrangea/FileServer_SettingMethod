@@ -202,7 +202,7 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
 
 -参考資料-  
 
-   > 標準テキスト CentOS7 構築・運用・管理パーフェクトガイド  
-   > http://www.turbolinux.com/products/server/11s/user_guide/aclcmdformat.html  
+   > - 標準テキスト CentOS7 構築・運用・管理パーフェクトガイド  
+   > - http://www.turbolinux.com/products/server/11s/user_guide/aclcmdformat.html  
 
 
