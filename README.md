@@ -129,8 +129,8 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      `[...]#usermod -aG (ユーザを追加したいグループ名) (追加するユーザ名)`  
 
      他にもコマンドがあるので調べて見るのもいいかも
-     - https://eng-entrance.com/linux-command-usermod
-     - https://eng-entrance.com/linux-command-groupmod#groupadd
+     > https://eng-entrance.com/linux-command-usermod
+     > https://eng-entrance.com/linux-command-groupmod#groupadd
 
      どんなgroupを作成したか忘れてしまった場合は、groupの一覧が/etc/groupに保存されているので確認してみてください。
 
@@ -141,7 +141,7 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
 
      restoreconコマンドは説明ができないので各々でググってw  
      一応参考になりそうなのを見つけたので見てみてください。  
-     - https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files
+     > https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files
 
 
 ## 6.smb.confの設定ファイルを書き換えてアクセスできるようにする  
@@ -183,7 +183,7 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
 - パーミッションの変更  
      `[...]# chmod -R (3桁の数字) (権限を与える、または削除するファイルのパス)`
       パーミッションの変更で3桁の数字の意味などはググる、もしくは次のサイトを見て
-     - http://www.obenri.com/_operation/user_permission01.html
+     > http://www.obenri.com/_operation/user_permission01.html
 
 ## 7.WindowsまたはMacでアクセス  
 - Windowsでアクセス  
@@ -201,7 +201,7 @@ Windowsと同じワークグループに属するようにsmb.confの設定内�
      これなら中古の安いデスクトップのパソコンで構築できるので、高いNASやめんどくさい外付けHDDよりもかなりコスト削減ができる。ただ、設定がめんどくさいのですぐに使いたい場合などは買ってくるのも方法の一つです。  
 
 -参考資料-  
-     - 標準テキスト CentOS7 構築・運用・管理パーフェクトガイド  
-     - http://www.turbolinux.com/products/server/11s/user_guide/aclcmdformat.html  
+     > 標準テキスト CentOS7 構築・運用・管理パーフェクトガイド  
+     > http://www.turbolinux.com/products/server/11s/user_guide/aclcmdformat.html  
 
 
