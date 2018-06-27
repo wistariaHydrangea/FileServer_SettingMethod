@@ -9,7 +9,7 @@
 
 
 ## 1.CentOSのイメージファイルを取得  
-CentOS7のイメージを作成[CentOS公式サイト](https://www.centos.org/download/)からイメージをダウンロードしてから、DVD-Rに落とす。焼くともいうのかな？
+CentOS7のイメージを作成するために[CentOS公式サイト](https://www.centos.org/download/)からイメージをダウンロードしてから、DVD-Rに落とす。焼くともいうのかな？
 
 Image
 
@@ -51,7 +51,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 priority=1 <--★ 追記する
 
-参照(https://tech.hitsug.net/?CentOS-7%2Fyum)
+> https://tech.hitsug.net/?CentOS-7%2Fyum
 
 
 ## 4.sambaのインストールと設定
