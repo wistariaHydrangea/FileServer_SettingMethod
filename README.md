@@ -1,7 +1,6 @@
 # CentOSにSamba(FileServer)を構築する
 
 知り合いから「もういらない」と言っていたmousecomputerを手に入れたのでOSはcentOS7、Sambaを入れてファイルサーバを構築してみようと思います。
-今後はVPNを使って外部からでもファイルの操作ができるようにしていこうと思ってます。
 
 ## 動作環境
 - MouseComputer desktop  
